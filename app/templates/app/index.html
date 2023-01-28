@@ -1,0 +1,27 @@
+{% extends 'app/base.html' %}
+{% load i18n %}
+
+{% block content %}
+<div class ="container">
+  {% if request.user.is_superuser %} <a href="{% url 'create-course' %}">Add course</a> || <a href="{% url 'create-topic' %}">Add topic</a> || <a href="{% url 'create-order' %}">Add course viewer</a> {% endif%}
+  {% for data in courses %}
+    <div class="card mt-2">
+      <div class="card-body">
+        <h5 class="card-title">{{ data.name }}</h5>
+        <p class="card-text">{{ data.desc }}.</p>
+        <h3 id="price" class="card-title">$ {{ data.price }}</h3> <span>{{ data.get_number_topics }} lessons</span>
+        
+        <a href="{% url 'course' pk=data.id %}" class="btn btn-primary">{% trans "View" %}</a>
+        {% for order in order %}
+          {{order.email}}
+        {% endfor %}
+      </div>
+
+    </div>
+
+  {% endfor %}
+
+</div>
+
+
+{% endblock content %}
