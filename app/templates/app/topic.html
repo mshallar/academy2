@@ -1,5 +1,5 @@
 {% extends 'app/base.html' %}
-
+{% load i18n %}
 {% block content %}
 
 <div class="container">
@@ -11,16 +11,16 @@
       
     
     <div class="d-flex flex-wrap">
-        <div class="col-4">
-            <video class="p-3" controlsList="nodownload" controls style="height: 30vh; width: auto;" src="{{t.video.url}}"></video>
+        <div class="col-1">
+            <video class="p-3" controlsList="nodownload" controls style="height: 67vh; width: auto;" src="{{t.video.url}}"></video>
             <p class="lead">{{t.name}}</p>
         </div>
     </div>
 
-    <h1>Comments</h1>
+    <h1>{% trans "Comments" %}</h1>
     {% for comment in comment %}
         <div class="flex">
-            <small>Username: {{comment.user.username}}</small>
+            <small>{% trans "Username" %}: {{comment.user.username}}</small>
             <p>{{comment.body}}</p>
         </div>
     {% endfor %}
@@ -29,7 +29,7 @@
     <form method="POST" class="post-form" enctype="multipart/form-data">
         {% csrf_token %}
         {{form.as_p}}
-        <input type="submit" value="submit">
+        <input type="submit" value="{% trans "submit" %}">
     </form>
 </div>
 

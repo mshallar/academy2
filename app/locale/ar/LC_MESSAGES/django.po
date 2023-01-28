@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-19 21:57+0300\n"
+"POT-Creation-Date: 2023-01-29 01:09+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,34 +18,59 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
 #: .\app\templates\app\base.html:16
 msgid "Logo"
-msgstr ""
+msgstr "الشعار"
 
 #: .\app\templates\app\base.html:24
 msgid "Home"
 msgstr "الصفحة الرئيسية"
 
-#: .\app\templates\app\base.html:27
-msgid "Courses"
-msgstr "الدورات"
-
-#: .\app\templates\app\base.html:45
+#: .\app\templates\app\base.html:39
 msgid "Logout"
-msgstr "تسجيل خروج"
+msgstr "تسجيل الخروج"
 
-#: .\app\templates\app\base.html:48
+#: .\app\templates\app\base.html:42
 msgid "Login"
 msgstr "تسجيل الدخول"
 
-#: .\app\templates\app\index.html:14
-msgid "View"
-msgstr "مشاهدة"
-
-#: .\app\templates\app\course.html:24
+#: .\app\templates\app\course.html:25
 msgid "Purchase"
 msgstr "شراء"
 
+#: .\app\templates\app\courses_form.html:14
+#: .\app\templates\app\order_form.html:10 .\app\templates\app\topic.html:32
+#: .\app\templates\app\topics_form.html:10
+msgid "submit"
+msgstr "أرسل"
+
+#: .\app\templates\app\index.html:11
+msgid "lessons"
+msgstr "الدروس"
+
+#: .\app\templates\app\index.html:13
+msgid "View"
+msgstr "استعراض"
+
 #: .\app\templates\app\success.html:7
 msgid "Payment Successful"
-msgstr "تم الدفع بنجاح"
+msgstr "تمت عملية الدفع بنجاح"
+
+#: .\app\templates\app\success.html:8
+msgid "Thank you for your purchase!"
+msgstr "شكرًأ لشرائكم دوراتنا"
+
+#: .\app\templates\app\success.html:9
+msgid "If you have any questions, please let us know through emails."
+msgstr "إن كان لديكم أي استفسار، يمكنكم مراسلتنا عبر البريد الإلكتروني"
+
+#: .\app\templates\app\topic.html:20
+msgid "Comments"
+msgstr "التعليقات"
+
+#: .\app\templates\app\topic.html:23
+#, fuzzy
+#| msgid "Username:"
+msgid "Username"
+msgstr "اسم المستخدم"

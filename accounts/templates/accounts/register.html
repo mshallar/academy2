@@ -1,11 +1,11 @@
 {% extends 'app/base.html' %}
-
+{% load i18n %}
 {% block content %}
 
 <div class="container">
     <form action="" method="post">
         {% csrf_token %}
-        <h2 class="text-center">Login</h2>
+        <h2 class="text-center">{% trans "Login" %}</h2>
         {% for field in form %}
         <div class="form-group">
             <label for="{{field.id_for_label}}">{{field.label_tag}}</label>
@@ -24,8 +24,8 @@
             <input type="password" id="password" class="form-control">
         </div> -->
         {% endfor %}
-        <button type="submit" class="btn btn-primary">Register</button>
-        <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+        <button type="submit" class="btn btn-primary">{% trans "Register" %}</button>
+        <p>{% trans "Already have an account? " %}<a href="{% url 'login' %}">{% trans "Login" %}</a></p>
     </form>
 </div>
 
