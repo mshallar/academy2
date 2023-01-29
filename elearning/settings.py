@@ -28,7 +28,9 @@ SECRET_KEY = 'django-insecure-6-oy@wuy==7%1o&azcm@bsovaw#qs&1%ehv8zxklqs%1k)&(!y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'hsoub-elearning.herokuapp.com', '127.0.0.1'
+]
 
 
 # Application definition
@@ -48,6 +50,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -81,13 +84,25 @@ WSGI_APPLICATION = 'elearning.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'heroku_cfaac8b9825ced9',
+        'USER': 'bccb56bfb1dd31',
+        'PASSWORD': '28232148',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
+}
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
