@@ -14,7 +14,6 @@
     <div class="d-flex flex-wrap">
       {% for lesson in lessons %}
       <div class="col-4">
-        <!-- <video class="p-3" controlsList="nodownload" controls style="height: 30vh; width: auto;" src="{{lesson.video.url}}"></video> -->
         <p>Lesson {{lesson.id}}. <a href="{% url 'topic' id=lesson.id %}" class="lead">{{lesson.name}}</a></p>
         
       </div>
@@ -30,13 +29,11 @@
   </div>
   <script type="text/javascript">
     // Create an instance of the Stripe object with your publishable API key
-    // var stripe = Stripe('pk_test_51MRlRLJCfcegF6B2YoySqbhUYBCHGE5D4dPIqVIJBPzCMLaY94sfDgg48gkkY3o1ePRWbx9MVWNQMHyDGp4LpQJX00h2GmIMMn');
     var stripe = Stripe('pk_test_51KOydKELUeIefn7YBSHTqKM120jMtpCwBSodKYw6XWNec5W5x2fwbUzLdF64mNCyFTPPp2tXa3UedkeOsiEs4Waq00Lrg2A5gk');
     var checkoutButton = document.getElementById('checkout-button');
    
     checkoutButton.addEventListener('click', function() {
       // Create a new Checkout Session using the server-side endpoint you
-      // created in step 3.
       fetch('/create-checkout-session/', {
         method: 'POST',
       })

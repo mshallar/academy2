@@ -11,18 +11,6 @@
             <label for="{{field.id_for_label}}">{{field.label_tag}}</label>
             <input type="{%if 'password' in field.label_tag %}password{% elif 'email' in field.label_tag %}email{% else %}text{% endif %}" name="{{field.html_name}}" id="{{field.id_for_label}}" class="form-control">
         </div>
-        <!-- <div class="form-group">
-            <label for="mail">Email</label>
-            <input type="email" id="mail" class="form-control">
-        </div> -->
-        <!-- <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" id="username" class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" id="password" class="form-control">
-        </div> -->
         {% endfor %}
         <button type="submit" class="btn btn-primary">{% trans "Register" %}</button>
         <p>{% trans "Already have an account? " %}<a href="{% url 'login' %}">{% trans "Login" %}</a></p>

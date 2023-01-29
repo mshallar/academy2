@@ -12,15 +12,11 @@ class Courses(models.Model):
         return self.name
 
     def get_number_topics(self):
-        # course_id = id
         count = Topics.objects.filter(course__id =self.id)
         return count.count()
 
     def get_absolute_url(self):
         return reverse('course', kwargs={'pk':self.pk})
-
-    # def get_paid_users(self):
-    #     users = Order.objects.filter(paid=True)
 
     class Meta:
         verbose_name_plural = "courses"
