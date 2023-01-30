@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+import mysql.connector
 
 from django.utils.translation import gettext_lazy as _
 
@@ -26,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-6-oy@wuy==7%1o&azcm@bsovaw#qs&1%ehv8zxklqs%1k)&(!y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'hsoub-elearning.herokuapp.com', '127.0.0.1'
