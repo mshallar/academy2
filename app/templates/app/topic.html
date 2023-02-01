@@ -4,16 +4,13 @@
 
 <div class="container">
     <div class="mt-2 jumbotron">
-      <h1 class="display-4">{{course.name}}</h1>
-      <p class="lead">{{course.desc}}</p>
-      
+      <h1 class="display-4">{{t.name}}</h1>
     </div>
-      
     
     <div class="d-flex flex-wrap">
         <div class="col-1">
             <video class="p-3" controlsList="nodownload" controls style="height: 67vh; width: auto;" src="{{t.video.url}}"></video>
-            <p class="lead">{{t.name}}</p>
+            <p class="lead">{{t.description}}</p>
         </div>
     </div>
 

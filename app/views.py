@@ -76,7 +76,6 @@ def course(request, pk):
         'course': get_object_or_404(Courses, id=pk),
         'lessons': lessons,
         'order': order,
-        
     }
     return render(request, 'app/course.html', context)
 
@@ -197,7 +196,7 @@ def webhook(request):
         ID=session["metadata"]["order_id"]
         print(ID)
         
-        Order.objects.filter(id=ID).update(email=customer_email, amount=price,paid=True,description=sessionID)
+        Order.objects.filter(id=ID).update(email=customer_email, amount=price, paid=True, description=sessionID)
 
     return HttpResponse(status=200)
 

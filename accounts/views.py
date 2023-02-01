@@ -9,7 +9,7 @@ def loginPage(request):
 	else:
 		if request.method == 'POST':
 			username = request.POST.get('username')
-			password =request.POST.get('password')
+			password = request.POST.get('password')
 
 			user = authenticate(request, username=username, password=password)
 
@@ -35,7 +35,7 @@ def signup(request):
             form = CreateUserForm(request.POST)
             if form.is_valid():
                 form.save()
-                
+               
                 return redirect('login')
         else:
             form = CreateUserForm()
