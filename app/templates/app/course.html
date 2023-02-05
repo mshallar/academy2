@@ -7,7 +7,6 @@
   <div class="mt-2 jumbotron">
     <h1 class="display-4">{{course.name}}</h1>
     <p class="lead">{{course.desc}}</p>
-    
   </div>
     
   {% if order or request.user.is_superuser %}
@@ -15,10 +14,8 @@
       {% for lesson in lessons %}
       <div class="col-4">
         <p>Lesson {{lesson.id}}. <a href="{% url 'topic' id=lesson.id %}" class="lead">{{lesson.name}}</a></p>
-        
       </div>
       {% endfor %}
-     
     </div>
   {% else %}
   <button type="submit" id="checkout-button" class="btn btn-primary">{% trans "Purchase" %}</button>

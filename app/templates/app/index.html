@@ -9,18 +9,13 @@
         <h5 class="card-title">{{ data.name }}</h5>
         <p class="card-text">{{ data.desc }}.</p>
         <h3 id="price" class="card-title">$ {{ data.price }}</h3> <span>{{ data.get_number_topics }} {% trans "lessons" %}</span>
-        
         <a href="{% url 'course' pk=data.id %}" class="btn btn-primary">{% trans "View" %}</a>
         {% for order in order %}
           {{order.email}}
         {% endfor %}
       </div>
-
     </div>
-
   {% endfor %}
-
 </div>
-
 
 {% endblock content %}
