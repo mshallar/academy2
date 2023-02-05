@@ -2,7 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
 
-
 class Courses(models.Model):
     name = models.CharField(max_length=200)
     desc = models.TextField(null=True, blank=True)
@@ -37,7 +36,7 @@ class Order(models.Model):
 
 class Topics(models.Model):
     name = models.CharField(max_length=200)
-    course = models.ManyToManyField(Courses, null=True, blank=True)
+    course = models.ForeignKey(Courses, on_delete=models.CASCADE, null=True, blank=True)
     video = models.FileField(upload_to='videos/', null=True, blank=True)
     description = models.TextField()
 

@@ -8,10 +8,8 @@ from django.conf import settings
 from django.http import JsonResponse,HttpResponse, HttpResponseNotFound
 from django.views.decorators.csrf import csrf_exempt
 from .forms import CommentForm
-from django.urls import reverse_lazy, reverse, resolve
+from django.urls import reverse_lazy, reverse
 from django.views.generic.edit import CreateView
-from django.views.generic import TemplateView
-
 
 stripe.api_key = settings.STRIPE_PRIVATE_KEY
 YOUR_DOMAIN = 'http://127.0.0.1:8000'
@@ -39,22 +37,6 @@ def success(request):
     order.save()
     
     return render(request,'app/success.html')
-
-class SuccessView(TemplateView):
-    template_name="app/success.html"
-
-    def get(self, request, *args, **kwargs):
-        session_id = request.GET.get('session_id')
-        if session_id is None:
-            return HttpResponseNotFound()
-
-        stripe.api_key = settings.STRIPE_PRIVATE_KEY
-        session = stripe.checkout.Session.retrieve(session_id)
-
-        order = get_object_or_404(Order, stripe_payment_intent=session.payment.intent)
-        order.paid = True
-        order.save()
-        return render(request, self.template_name)
 
     
 #cancel view

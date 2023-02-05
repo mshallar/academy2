@@ -6,7 +6,6 @@ from django.conf.urls.i18n import i18n_patterns
 from app.views import create_checkout_session, webhook
 
 urlpatterns = [
-    #path('', include('app.urls')),
     path('admin/', admin.site.urls),
     path('create-checkout-session/', create_checkout_session, name='checkout'),
     path('webhooks/stripe/', webhook,name="webhook"),

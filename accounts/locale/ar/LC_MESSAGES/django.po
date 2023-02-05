@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-29 01:16+0300\n"
+"POT-Creation-Date: 2023-02-05 10:51+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,8 +21,7 @@ msgstr ""
 
 #: .\accounts\templates\accounts\login.html:8
 #: .\accounts\templates\accounts\login.html:20
-#: .\accounts\templates\accounts\register.html:8
-#: .\accounts\templates\accounts\register.html:28
+#: .\accounts\templates\accounts\register.html:25
 msgid "Login"
 msgstr "تسجيل الدخول"
 
@@ -39,10 +38,15 @@ msgid "Don't have an account? "
 msgstr "ليس لديكم حساب مسبق؟ "
 
 #: .\accounts\templates\accounts\login.html:21
-#: .\accounts\templates\accounts\register.html:27
+#: .\accounts\templates\accounts\register.html:8
+#: .\accounts\templates\accounts\register.html:24
 msgid "Register"
 msgstr "التسجيل"
 
-#: .\accounts\templates\accounts\register.html:28
+#: .\accounts\templates\accounts\register.html:18
+msgid "Please fix the following errors:"
+msgstr "الرجاء تصحيح الأخطاء التالية:"
+
+#: .\accounts\templates\accounts\register.html:25
 msgid "Already have an account? "
 msgstr "هل لديكم حساب مسبق؟ "

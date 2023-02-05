@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-29 01:09+0300\n"
+"POT-Creation-Date: 2023-02-05 10:35+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,7 +23,9 @@ msgstr ""
 msgid "Logo"
 msgstr "الشعار"
 
-#: .\app\templates\app\base.html:24
+#: .\app\templates\app\base.html:24 .\app\templates\app\success.html:10
+#, fuzzy
+#| msgid "Home"
 msgid "Home"
 msgstr "الصفحة الرئيسية"
 
@@ -35,15 +37,9 @@ msgstr "تسجيل الخروج"
 msgid "Login"
 msgstr "تسجيل الدخول"
 
-#: .\app\templates\app\course.html:25
+#: .\app\templates\app\course.html:24
 msgid "Purchase"
 msgstr "شراء"
-
-#: .\app\templates\app\courses_form.html:14
-#: .\app\templates\app\order_form.html:10 .\app\templates\app\topic.html:32
-#: .\app\templates\app\topics_form.html:10
-msgid "submit"
-msgstr "أرسل"
 
 #: .\app\templates\app\index.html:11
 msgid "lessons"
@@ -65,12 +61,24 @@ msgstr "شكرًأ لشرائكم دوراتنا"
 msgid "If you have any questions, please let us know through emails."
 msgstr "إن كان لديكم أي استفسار، يمكنكم مراسلتنا عبر البريد الإلكتروني"
 
-#: .\app\templates\app\topic.html:20
+#: .\app\templates\app\success.html:10
+msgid "Go to "
+msgstr "انتقل إلى "
+
+#: .\app\templates\app\success.html:10
+msgid " to view the course"
+msgstr " لاستعراض الدورات"
+
+#: .\app\templates\app\topic.html:17
 msgid "Comments"
 msgstr "التعليقات"
 
-#: .\app\templates\app\topic.html:23
+#: .\app\templates\app\topic.html:20
 #, fuzzy
 #| msgid "Username:"
 msgid "Username"
 msgstr "اسم المستخدم"
+
+#: .\app\templates\app\topic.html:29
+msgid "submit"
+msgstr "أرسل"

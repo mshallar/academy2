@@ -1,12 +1,12 @@
 {% extends 'app/base.html' %}
 {% load i18n %}
-
 {% block content %}
+
 <div class="container">
-    <p>
-       <h3>{% trans "Payment Successful" %}</h3>
-      <p>{% trans "Thank you for your purchase!" %}</p>
-      <p>{% trans "If you have any questions, please let us know through emails." %}</p>
-    </p>
-  </div>
+  <h3>{% trans "Payment Successful" %}</h3>
+  <p>{% trans "Thank you for your purchase!" %}</p>
+  <p>{% trans "If you have any questions, please let us know through emails." %}</p>
+  <p>{% trans "Go to " %}<a href="{% url 'home' %}">{% trans "Home" %}</a>{% trans " to view the course" %}</p>
+</div>
+
 {% endblock content %}
